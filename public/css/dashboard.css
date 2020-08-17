@@ -1,0 +1,215 @@
+body {
+    font-size: .875rem;
+  }
+  
+  .feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+  }
+  
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; 
+    padding: 48px 0 0; 
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    overflow-x: hidden;
+    overflow-y: auto; 
+  }
+  
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+    }
+  }
+
+  .active{
+    background-color: #e8f0fe;
+    border: solid transparent;
+    border-width: 1px 1px 1px 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-top: 0; 
+  }
+  
+  .sidebar .nav-item {
+    height: 50px;
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .sidebar .nav-link {
+    font-weight: 500;
+    width: 100%;
+    color: #333;
+  }
+  
+  .sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+  }
+  
+  .sidebar .nav-link.active {
+    color: #007bff;
+  }
+  
+  .sidebar .nav-link:hover .feather,
+  .sidebar .nav-link.active .feather {
+    color: inherit;
+  }
+  
+  .sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+  
+  [role="main"] {
+    padding-top: 48px; 
+  }
+  
+  
+  .navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+  }
+  
+  .navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+  }
+  
+  .form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+  }
+  
+  .form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  }
+
+
+  /* Avatar Dropdown */
+  ul {
+    list-style: none;
+  }
+  
+  .user-menu-wrap {
+    position: relative;
+    width: 36px;
+    margin: 50px auto;
+  }
+  
+  .menu-container {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .menu-container.active {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  
+  .user-menu {
+    position: absolute;
+    right: -22px;
+    background-color: #FFFFFF;
+    width: 256px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+  }
+  .user-menu .profile-highlight {
+    display: -webkit-box;
+    display: flex;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 12px 16px;
+    margin-bottom: 6px;
+  }
+  .user-menu .profile-highlight img {
+    width: 48px;
+    height: 48px;
+    border-radius: 25px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .user-menu .profile-highlight .details {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    margin: auto 12px;
+  }
+  .user-menu .profile-highlight .details #profile-name {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .user-menu .profile-highlight .details #profile-footer {
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  .user-menu .footer {
+    border-top: 1px solid #E0E0E0;
+    padding-top: 6px;
+    margin-top: 6px;
+  }
+  .user-menu .footer .user-menu-link {
+    font-size: 13px;
+  }
+  .user-menu .user-menu-link {
+    display: -webkit-box;
+    display: flex;
+    text-decoration: none;
+    color: #333333;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+  .user-menu .user-menu-link div {
+    margin: auto 10px;
+  }
+  .user-menu .user-menu-link:hover {
+    background-color: #F5F5F5;
+    color: #333333;
+  }
+  .user-menu:before {
+    position: absolute;
+    top: -16px;
+    left: 120px;
+    display: inline-block;
+    content: "";
+    border: 8px solid transparent;
+    border-bottom-color: #E0E0E0;
+  }
+  .user-menu:after {
+    position: absolute;
+    top: -14px;
+    left: 121px;
+    display: inline-block;
+    content: "";
+    border: 7px solid transparent;
+    border-bottom-color: #FFFFFF;
+  }
+  
